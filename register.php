@@ -1,23 +1,31 @@
 <?php
 include('header.php');
 include('dbcon.php');
+session_start();
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $username = mysqli_real_escape_string($connection, $_POST['username']);
-    $password = password_hash($_POST['password'], PASSWORD_BCRYPT);
+    $password = mysqli_real_escape_string($connection, $_POST['password']);
+    $hashed_password = password_hash($password, PASSWORD_DEFAULT); // Hash the password
 
-    $query = "INSERT INTO `users` (`username`, `password`) VALUES ('$username', '$password')";
+    $query = "SELECT * FROM users WHERE username='$username'";
     $result = mysqli_query($connection, $query);
 
-    if ($result) {
-        echo "Registration successful. You can <a href='login.php'>login</a> now.";
+    if ($result && mysqli_num_rows($result) > 0) {
+        echo "Username already exists!";
     } else {
-        echo "Error: " . mysqli_error($connection);
+        $query = "INSERT INTO users (username, password) VALUES ('$username', '$hashed_password')";
+        if (mysqli_query($connection, $query)) {
+            echo "Registration successful!";
+            header('Location: login.php'); // Redirect to login page
+            exit;
+        } else {
+            echo "Error: " . mysqli_error($connection);
+        }
     }
 }
 ?>
-
-<form action="register.php" method="post">
+<form action="register.php" method="POST">
     <div class="form-group">
         <label for="username">Username</label>
         <input type="text" class="form-control" id="username" name="username" required>

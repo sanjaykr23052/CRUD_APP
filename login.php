@@ -1,3 +1,8 @@
+
+
+
+
+
 <?php
 include('header.php');
 include('dbcon.php');
@@ -20,22 +25,22 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             echo "Invalid password!";
         }
     } else {
-        echo "No user found with that username!";
+        echo "No user found Let's Register an Account!";
     }
 }
 ?>
 <form action="login.php" method="POST">
-<div class="form-group">
-
-    <label for="username">Username</label>
-    <input type="text" class="form-control" id="username" name="username" required>
-</div>
-<div class="form-group">
-
-    <label for="password">Password</label>
-    <input type="password" class="form-control" id="password" name="password" required>
-</div>
+    <div class="form-group">
+        <label for="username">Username</label>
+        <input type="text" class="form-control" id="username" name="username" required>
+    </div>
+    <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" class="form-control" id="password" name="password" required>
+    </div>
     <button type="submit" class="btn btn-primary">Login</button>
 </form>
+<p>New user? <a href="register.php">Register here</a></p>
 
 <?php include('footer.php'); ?>
+
