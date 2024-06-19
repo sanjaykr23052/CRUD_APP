@@ -11,7 +11,8 @@ Project Panels:
  Screenshots :
 
  Register Panel:
-![Screenshot (292)](https://github.com/sanjaykr23052/CRUD-APP/assets/102296455/04b4e416-789a-46a1-9b4f-e007a3c00ff3)
+
+![Screenshot (292)](https://github.com/sanjaykr23052/crud_app/assets/102296455/99b1c1fe-7338-4ae4-80cd-6acf28c7f77e)
 
  Login Panel:
 
@@ -19,11 +20,13 @@ Project Panels:
 
  Logout Panel:
 
-![Screenshot (294)](https://github.com/sanjaykr23052/CRUD-APP/assets/102296455/93c66a55-2866-434e-a727-7a7da23bcf69)
+
+![Screenshot (294)](https://github.com/sanjaykr23052/crud_app/assets/102296455/9930a550-d5b7-418b-8294-eae105e9c7cf)
 
 User Interface:
-![Screenshot (295)](https://github.com/sanjaykr23052/CRUD-APP/assets/102296455/e544b914-48f2-417d-aedf-160859c26395)
 
+
+![Screenshot (295)](https://github.com/sanjaykr23052/crud_app/assets/102296455/373079a4-0ac4-4aad-91b1-f8dca1a6498c)
 
  To run this project, follow these steps:
 Set Up Database:
